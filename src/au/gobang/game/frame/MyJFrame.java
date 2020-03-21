@@ -60,7 +60,9 @@ public class MyJFrame extends JFrame implements MouseListener,Runnable {
         //添加监听事件
         this.addMouseListener(this);
         try {
-            bjImage = ImageIO.read(new File("C:/Users/Administrator.WIN-IHVBI18K8J9/Pictures/Saved Pictures/0.jpg"));
+            String projectPath = System.getProperty("user.dir");
+            bjImage = ImageIO.read(new File(projectPath+"\\out\\Resources\\0.jpg"));
+            //bjImage = ImageIO.read(new File("C:/Users/Administrator.WIN-IHVBI18K8J9/Pictures/Saved Pictures/0.jpg"));
         } catch (IOException e) {
             e.printStackTrace();
         }
